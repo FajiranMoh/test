@@ -1,1 +1,35 @@
-import Head from 'next/head';\nimport Link from 'next/link';\n\nexport default function Home() {\n  return (\n    <>\n      <Head>\n        <title>Landing Page</title>\n        <meta name="description" content="Landing page built with Next.js" />\n        <link rel="icon" href="/favicon.ico" />\n      </Head>\n      <main className="flex flex-col items-center justify-center min-h-screen py-2">\n        <h1 className="text-6xl font-bold">\n          Welcome to <a href="https://nextjs.org">Next.js!</a>\n        </h1>\n        <p className="mt-3 text-2xl">\n          Get started by editing <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">pages/index.tsx</code>\n        </p>\n        <div className="flex items-center justify-center flex-wrap max-w-4xl mt-6 sm:w-full">\n          <Link href="/about">\n            <a className="m-4 text-xl font-bold text-blue-600 hover:underline">Learn More</a>\n          </Link>\n        </div>\n      </main>\n      <footer className="flex items-center justify-center w-full h-24 border-t">\n        Your Company Name © 2023\n      </footer>\n    </>\n  );\n}
+import React from 'react';
+import Link from 'next/link';
+
+export default function Home() {
+  return (
+    <div className='flex flex-col min-h-screen'>
+      <header className='bg-gray-800 text-white p-6'>
+        <h1 className='text-3xl font-bold'>Welcome to Our Website!</h1>
+      </header>
+      <main className='flex-grow container mx-auto px-4'>
+        <section className='text-center my-8'>
+          <h2 className='text-2xl font-bold'>Features</h2>
+          <p className='my-4'>Discover our amazing features.</p>
+        </section>
+        <section className='grid grid-cols-1 md:grid-cols-3 gap-4 my-8'>
+          <div className='border p-4'>
+            <h3 className='font-bold'>Feature 1</h3>
+            <p>Detail about Feature 1.</p>
+          </div>
+          <div className='border p-4'>
+            <h3 className='font-bold'>Feature 2</h3>
+            <p>Detail about Feature 2.</p>
+          </div>
+          <div className='border p-4'>
+            <h3 className='font-bold'>Feature 3</h3>
+            <p>Detail about Feature 3.</p>
+          </div>
+        </section>
+      </main>
+      <footer className='bg-gray-700 text-white text-center p-4'>
+        © 2023 Your Company Name
+      </footer>
+    </div>
+  );
+}
