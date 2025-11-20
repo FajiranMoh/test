@@ -1,8 +1,10 @@
 import React from 'react';
+import { Navbar } from '../components/ui/Navbar';
 
 export default function Page() {
   return (
     <div className="min-h-screen flex flex-col">
+      <Navbar />
       <section className="hero bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20 flex-1 flex items-center justify-center">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold mb-4">Welcome to Our Site!</h1>
