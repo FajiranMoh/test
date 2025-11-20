@@ -1,15 +1,11 @@
-import type { Metadata } from 'next';
-import './globals.css';
+import React from 'react';
+import { Navbar } from '../components/ui/Navbar';
 
-export const metadata: Metadata = {
-  title: 'test',
-  description: 'A Next.js 15 + Tailwind + shadcn UI landing page built by Selda AI'
-};
+const Layout = ({ children }) => (
+  <div>
+    <Navbar />
+    {children}
+  </div>
+);
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en" suppressHydrationWarning>
-      <body>{children}</body>
-    </html>
-  );
-}
+export default Layout;
